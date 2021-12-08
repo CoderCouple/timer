@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>CSS3</title>
-        <link href="index.css" rel="stylesheet" type="text/css">
-        <link rel="shortcut icon" type="image/jpg" href="images/favicon.jpeg"/>
-        <script src="index.js" type="text/javascript"></script>
-    <body>
-        <input type="text" name="time" value="30" id="time">
-        <button class="button" id="start"> START </button>
-        <button class="button" id="pause"> PAUSE </button>
-    </body>
-</html> 
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="timer">
+      <div class="controls">
+        <input id="timeValue" value="3" />
+        <div>
+          <button id="startButton"><i class="fas fa-play"></i></button>
+          <button id="pauseButton"><i class="fas fa-pause"></i></button>
+        </div>
+      </div>
+      <svg class="dial">
+        <circle
+          fill="transparent"
+          stroke="green"
+          stroke-width="15"
+          r="190"
+          cx="0"
+          cy="200"
+          transform="rotate(-90 100 100)"
+        />
+      </svg>
+    </div>
+
+    <script src="timer.js"></script>
+    <script src="circle.js"></script>
+  </body>
+</html>
